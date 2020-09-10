@@ -28,7 +28,7 @@ public interface LeadersApiClient {
     Call<List<SkillIQLeader>> doGetListIQLeaders();
 
     // 1.Submit project
-    @POST("90001FAIpQLSf9d1TcNU6zc6KR8bSEM41Z1g1zl35cwZr2xyjIhaMAz8WChQ/formResponse")
+    @POST("1FAIpQLSf9d1TcNU6zc6KR8bSEM41Z1g1zl35cwZr2xyjIhaMAz8WChQ/formResponse")
     @FormUrlEncoded
     Call<Void> submitProject(
             @Field("entry.1824927963") String email,
