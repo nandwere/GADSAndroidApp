@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_full"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.LeaderBoardActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#fff"
+                android:text="@string/leaderboard"
+                android:layout_marginLeft="20dp"
+                android:gravity="fill_vertical" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:paddingEnd="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="submitProject"
+                android:layout_marginRight="10dp"
+                android:paddingRight="20dp" />
+        </RelativeLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            app:tabIndicatorColor="#fff"
+            app:tabIndicatorHeight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
